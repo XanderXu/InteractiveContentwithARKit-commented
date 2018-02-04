@@ -436,7 +436,7 @@ extension Chameleon {
 		}
 		
 		// Correct the user position such that it is a few centimeters in front of the camera.
-        // 纠正用户位置,使其位于摄像机前几厘米处.
+        // 纠正用户位置,使其位于摄像机前几厘米处.(这样舌头会停在离屏幕前,紧贴屏幕,以免显示破损)
 		let translationLocal = SCNVector3(0, 0, -0.012)
 		let translationWorld = pointOfView.convertVector(translationLocal, to: nil)
 		let camTransform = SCNMatrix4Translate(pointOfView.transform, translationWorld.x, translationWorld.y, translationWorld.z)
