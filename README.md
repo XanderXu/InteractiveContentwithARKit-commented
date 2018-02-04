@@ -1,10 +1,11 @@
+> 说明:相关解读文章,地址[见这里](https://juejin.im/post/5a76e1975188257a59119bac) 配合阅读,效果更佳.
 # Interactive Content with ARKit
 # 用ARKit与内容交互
 
 This sample demonstrates using SceneKit content with ARKit together to achieve an interactive AR experience.  
 本示例程序使用了SceneKit和ARkit来共同实现交互式的AR体验.
 
-It uses ARKit to display an animated chameleon in a camera view. You can interact with the chameleon by touching it, and you can move it to new locations by tapping at a place or dragging the chameleon. The model also reacts to the user's movement based on the relative position and proximity of the camera.
+It uses ARKit to display an animated chameleon in a camera view. You can interact with the chameleon by touching it, and you can move it to new locations by tapping at a place or dragging the chameleon. The model also reacts to the user's movement based on the relative position and proximity of the camera.  
 它使用ARKit在摄像机视图上显示出一个动态的变色龙.你可以通过触摸与它交互,并可通过点击或拖拽来移动变色龙.同时,模型还会根据用户的相对位置的移动不断变化.
 
 ## What this sample demonstrates
