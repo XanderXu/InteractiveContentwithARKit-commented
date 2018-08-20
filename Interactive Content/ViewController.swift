@@ -1,5 +1,5 @@
 /*
- Copyright (C) 2017 Apple Inc. All Rights Reserved.
+ Copyright (C) 2018 Apple Inc. All Rights Reserved.
  See LICENSE.txt for this sample’s licensing information
  
  Abstract:
@@ -61,6 +61,10 @@ class ViewController: UIViewController {
     }
 	
 	func startNewSession() {
+		// hide toast
+		self.toast.alpha = 0
+		self.toast.frame = self.toast.frame.insetBy(dx: 5, dy: 5)
+		
 		chameleon.hide()
 		
 		// Create a session configuration with horizontal plane detection
@@ -172,6 +176,9 @@ extension ViewController: ARSessionObserver {
 			if !chameleon.isVisible() {
 				message = "Move to find a horizontal surface"
 			}
+		default:
+			// We are only concerned with the tracking states above.
+			message = "Camera changed tracking state"
 		}
 		
 		message != nil ? showToast(message!) : hideToast()
